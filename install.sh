@@ -23,7 +23,7 @@ do
 			pacman -S --noconfirm python-pip
 		;;
 		docker-compose)
-			pip3 install docker-compose > /dev/null
+			pacman -S --noconfirm docker-compose
 		;;
 		docker)
 			pacman -S --noconfirm docker
