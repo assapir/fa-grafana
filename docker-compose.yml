@@ -8,13 +8,13 @@ services:
   
   dump1090exporter:
     container_name: dump1090exporter
-    image: flightawareadsb/dump1090exporter:1.0
+    image: clawsicus/dump1090exporter:latest
     ports:
       - "9105:9105"
     restart: always
     stop_signal: SIGINT
     command: [
-      "--url=http://${HOST_IP:?IP_ADDRESS_UNSET_ERROR}:8080",
+      "--resource-path=http://${HOST_IP:?IP_ADDRESS_UNSET_ERROR}:7070",
       "--debug"]
 
   prometheus:
